@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/skillitzimberg/journalNodeJS/issues"
   },
-  "homepage": "https://github.com/skillitzimberg/journalNodeJS#readme"
+  "homepage": "https://github.com/skillitzimberg/journalNodeJS#readme",
+  "devDependencies": {
+    "webpack": "^4.0.1"
+  }
 }
