@@ -8,6 +8,8 @@ $(document).ready(function() {
     var date = $('#entryDate').val();
     var title = $('#entryTitle').val();
     var entry = $('#journalEntry').val();
-    $('#journalDisplay').append(date, title, entry);
+    var newEntry = new journalEntry(date, title, entry);
+    
+    $('#journalDisplay').append(newEntry);
   });
 });
