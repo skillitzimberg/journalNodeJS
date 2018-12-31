@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/skillitzimberg/journalNodeJS#readme",
   "devDependencies": {
+    "css-loader": "^0.28.10",
+    "style-loader": "^0.20.2",
     "webpack": "^4.0.1",
     "webpack-cli": "^2.0.9"
   }
