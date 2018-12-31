@@ -6,7 +6,8 @@ $(document).ready(function() {
     event.preventDefault();
 
     var date = $('#entryDate').val();
+    var title = $('#entryTitle').val();
     var entry = $('#journalEntry').val();
-    $('#journalDisplay').append(entry);
+    $('#journalDisplay').append(date, title, entry);
   });
 });

@@ -6,13 +6,24 @@
   </head>
   <body>
     <form id="journalEntry-form">
-      <label for="entryDate"></label>
-      <input type="date" id="entryDate" name="entryDate" value="">
+      <div class='form-group'>
+        <label for="entryDate"></label>
+        <input type="date" id="entryDate" name="entryDate" value="">
+      </div>
+      
+      <div class='form-group'>
+        <label for="entryTitle"></label>
+        <input type="text" id="entryTitle" name="entryTitle" value="">
+      </div>
 
-      <label for="journalEntry">Add a journal entry</label>
-      <textarea id="journalEntry" name="journalEntry"></textarea>
+      <div class='form-group'>
+        <label for="journalEntry">Add a journal entry</label>
+        <textarea id="journalEntry" name="journalEntry"></textarea>
+      </div>
+
       <button type="submit">Submit</button>
     </form>
+
     <div id="journalDisplay"></div>
   </body>
 </html>
