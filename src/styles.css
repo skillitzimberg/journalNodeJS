@@ -1,3 +1,11 @@
 body {
   background-color: #7fdbff;
 }
+
+label {
+  display: block;
+}
+
+.hide {
+  display: none;
+}

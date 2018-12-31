@@ -1,4 +1,4 @@
-import { journalEntry } from './entry';
+import { JournalEntry } from './entry';
 import './styles.css';
 
 $(document).ready(function() {
@@ -8,8 +8,19 @@ $(document).ready(function() {
     var date = $('#entryDate').val();
     var title = $('#entryTitle').val();
     var entry = $('#journalEntry').val();
-    var newEntry = new journalEntry(date, title, entry);
-    
-    $('#journalDisplay').append(newEntry);
+    var newEntry = new JournalEntry(date, title, entry);
+
+    $('#journalEntry-form').addClass('hide');
+
+    $('#journalDisplay').append(newEntry.date, newEntry.title, newEntry.entry, newEntry.wordCount(), newEntry.vowelCount(), newEntry.consonantCount(), newEntry.getTeaser());
+
+    $('#entryDate').val('');
+    $('#entryTitle').val('');
+    $('#journalEntry').val('');
   });
+
+  $('#revealForm').click(function() {
+    $('#journalEntry-form').removeClass('hide');
+  });
+
 });
