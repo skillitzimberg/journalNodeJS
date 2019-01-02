@@ -21,17 +21,18 @@ JournalEntry.prototype.consonantCount = function() {
 };
 
 JournalEntry.prototype.getTeaser = function() {
-  var firstSentence = this.entry.match(/([^.!?]*[.!?]\s)/);
-  // var firstArray = firstSentence.split(' ');
-  // var teaserArray = [];
-  // if (firstArray > 8) {
-  //   for (var index = 0; index <= 8; index++) {
-  //     teaserArray.push(firstArray[index]);
-  //   }
-  //   var teaser = teaserArray.join(' ');
-  //   return teaser;
-  // }
-  // else {
-    return firstSentence[0];
-  // }
+  var matchedSentence = this.entry.match(/[A-Z][^.!?]*[.!?]/);
+  var sentenceToArray = matchedSentence[0].split(' ');
+  var sentenceLength = sentenceToArray.length;
+
+  var buildTeaser = '';
+  
+  if(sentenceLength > 8) {
+    for(var index = 0; index < 8; index++) {
+      buildTeaser += sentenceToArray[index] + ' ';
+    }
+    buildTeaser += '. . .';
+    return buildTeaser;
+  }
+  return matchedSentence[0];
 };
